@@ -1,3 +1,11 @@
 <div>Nombre = {{nombre}}</div>
 <div>Apellido = {{apellido}}</div>
 <div>Edad = {{edad}}</div>
+<div>Empresa = {{empresa.value}}</div>
+Introducir empresa:
+<input type="text" #empresa (keyup)="0">
+
+<br/>
+<br/>
+
+<input type="button" value="confirmar" (click)="cambiarEmpresa(empresa.value)">

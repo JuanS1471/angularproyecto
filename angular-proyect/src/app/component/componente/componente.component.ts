@@ -11,9 +11,14 @@ export class ComponenteComponent implements OnInit {
   apellido = "Gomez"
   edad = 24
 
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  cambiarEmpresa(value: string){
+    
   }
 
 }
