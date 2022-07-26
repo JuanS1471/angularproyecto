@@ -3,9 +3,10 @@
 <div>Edad = {{edad}}</div>
 <div>Empresa = {{empresa.value}}</div>
 Introducir empresa:
-<input type="text" #empresa (keyup)="0">
+<input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro">
 
 <br/>
 <br/>
 
-<input type="button" value="confirmar" (click)="cambiarEmpresa(empresa.value)">
+<input type="checkbox" value="confirmar" [checked]="userRegister">
+{{userRegistr()}}

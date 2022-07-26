@@ -20,5 +20,10 @@ export class ComponenteComponent implements OnInit {
   cambiarEmpresa(value: string){
     
   }
+  habilitacionCuadro = true;
+  userRegister = false
+  userRegistr(){
+    this.userRegister = true
+  }
 
 }
