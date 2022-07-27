@@ -17,6 +17,8 @@ export class ComponenteComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  textoRegister = 'No hay nadie registrado'
+
   cambiarEmpresa(value: string){
     
   }
@@ -25,5 +27,14 @@ export class ComponenteComponent implements OnInit {
   userRegistr(){
     this.userRegister = true
   }
-
+  setUsuarioRegistrado(event: Event){
+    
+    if((<HTMLInputElement>event.target).value == "si"){
+      this.textoRegister = 'Alguien registrado';
+    }
+    else{
+      this.textoRegister = 'No hay nadie registrado';
+    }
+  }
+    
 }
