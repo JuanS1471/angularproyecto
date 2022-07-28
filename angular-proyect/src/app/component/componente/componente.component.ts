@@ -10,7 +10,7 @@ export class ComponenteComponent implements OnInit {
   nombre = "Jose"
   apellido = "Gomez"
   edad = 24
-
+  empresa="GooG";
 
   constructor() { }
 
@@ -19,10 +19,8 @@ export class ComponenteComponent implements OnInit {
 
   textoRegister = 'No hay nadie registrado'
 
-  cambiarEmpresa(value: string){
-    
-  }
-  habilitacionCuadro = true;
+  
+  habilitacionCuadro = false;
   userRegister = false
   userRegistr(){
     this.userRegister = true
@@ -36,5 +34,4 @@ export class ComponenteComponent implements OnInit {
       this.textoRegister = 'No hay nadie registrado';
     }
   }
-    
 }

@@ -1,9 +1,9 @@
 <div>Nombre = {{nombre}}</div>
 <div>Apellido = {{apellido}}</div>
 <div>Edad = {{edad}}</div>
-<div>Empresa = {{empresa.value}}</div>
+<div>Empresa = {{empresa}}</div>
 Introducir empresa:
-<input type="text" #empresa (keyup)="0" >
+<input type="text" [(ngModel)]="empresa" [disabled]="habilitacionCuadro">
 
 <br/>
 <br/>
