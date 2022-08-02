@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponenteComponent } from './component/componente/componente.component';
-import { ComponentchildComponent } from './componentehijo/componentchild/componentchild.component';
+import { ComponentchildComponent } from './componentehijo/componentchild/componentchild.component';        
 
 @NgModule({
   declarations: [

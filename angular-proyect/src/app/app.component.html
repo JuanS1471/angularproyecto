@@ -2,7 +2,9 @@
 <h1>{{title}}</h1>
 <br>
 <br>
-Numero 1: <input type="text" [(ngModel)]="numero1"> <br>
-Numero 2: <input type="text" [(ngModel)]="numero2"> <br>
-
+Numero 1: <input type="number" [(ngModel)]="numero1"> <br>
+Numero 2: <input type="number" [(ngModel)]="numero2"> <br>
+{{resultado}}
+<br>
 <input type="button" value="sumar" (click)="sumarCalc()">
+<input type="button" value="restar" (click)="restar()">

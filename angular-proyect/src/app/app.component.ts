@@ -7,10 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Calculadora';
-  numero1 = 0;
-  numero2 = 0;
+  numero1:number = 0;
+  numero2:number = 0;
   resultado = 0;
   sumarCalc(){
     this.resultado = this.numero1 + this.numero2
+  }
+  restar():void{
+    this.resultado = this.numero1 - this.numero2
   }
 }
