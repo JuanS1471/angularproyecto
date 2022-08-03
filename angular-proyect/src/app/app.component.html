@@ -1,10 +1,9 @@
-<!-- <app-componente></app-componente> -->
-<h1>{{title}}</h1>
-<br>
-<br>
-Numero 1: <input type="number" [(ngModel)]="numero1"> <br>
-Numero 2: <input type="number" [(ngModel)]="numero2"> <br>
-{{resultado}}
-<br>
-<input type="button" value="sumar" (click)="sumarCalc()">
-<input type="button" value="restar" (click)="restar()">
+<h1 style="text-align: center;">{{titulo}}</h1>
+
+<form>
+    <input type="text" name="nombre"><br>
+    <input type="text" name="apellido"><br>
+    <input type="submit" value="registrar" (click)="registrarUser()">
+</form>
+
+<p *ngIf="registrado">{{mensaje}}</p>

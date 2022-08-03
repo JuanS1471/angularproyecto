@@ -6,14 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Calculadora';
-  numero1:number = 0;
-  numero2:number = 0;
-  resultado = 0;
-  sumarCalc(){
-    this.resultado = this.numero1 + this.numero2
-  }
-  restar():void{
-    this.resultado = this.numero1 - this.numero2
+  titulo = 'Directivas';
+  mensaje="";
+  registrado !: boolean;
+
+  registrarUser(){
+    this.registrado = true;
+    this.mensaje = "Se ha registrado"
   }
 }
