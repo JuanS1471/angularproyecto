@@ -5,5 +5,13 @@
     <input type="text" name="apellido"><br>
     <input type="submit" value="registrar" (click)="registrarUser()">
 </form>
-
-<p *ngIf="registrado">{{mensaje}}</p>
+<button type="button" class="btn btn-primary">Primary</button>
+<p *ngIf="registrado; else noRegistrado">{{mensaje}}</p>
+<ng-template #noRegistrado>
+<p>No se ha registrado</p>
+</ng-template>
+<br>
+<br>
+<ul>
+    <li *ngFor="let ent of entradas; let i=index">{{ent.titulo}} - entrada {{i+1}}</li>
+</ul>
