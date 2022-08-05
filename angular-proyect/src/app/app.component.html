@@ -1,17 +1,6 @@
-<h1 style="text-align: center;">{{titulo}}</h1>
-
-<form>
-    <input type="text" name="nombre"><br>
-    <input type="text" name="apellido"><br>
-    <input type="submit" value="registrar" (click)="registrarUser()">
-</form>
-<button type="button" class="btn btn-primary">Primary</button>
-<p *ngIf="registrado; else noRegistrado">{{mensaje}}</p>
-<ng-template #noRegistrado>
-<p>No se ha registrado</p>
-</ng-template>
-<br>
-<br>
-<ul>
-    <li *ngFor="let ent of entradas; let i=index">{{ent.titulo}} - entrada {{i+1}}</li>
-</ul>
+<mat-card *ngFor="let emp of empleados">
+            <mat-card-header>{{emp.nombre}} 
+                {{emp.apellido}}<br></mat-card-header> 
+                {{emp.cargo}}<br>
+                {{emp.salario}}<br>
+</mat-card>

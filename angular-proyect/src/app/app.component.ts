@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { empleado } from './empleado.model';
 
 @Component({
   selector: 'app-root',
@@ -6,31 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  titulo = 'Directivas';
-  mensaje="";
-  registrado !: boolean;
-  entradas !: any;
+  titulo='Listado empleados';
 
-  constructor(){
-    this.entradas=[
-      {
-        titulo:"java"
-      },
-      {
-        titulo:"python"
-      },
-      {
-        titulo:"C++"
-      },
-      {
-        titulo:"TS"
-      },
-    ]
-  }
+  empleados:empleado[]=[
+    new empleado("Jose","gomez","Developer",500000),
+    new empleado("Andres","lopez","Backend",600000),
+    new empleado("Martin","serna","SQL",700000),
+    new empleado("Adriana","gomez","Directivo",800000)
+  ]
 
-
-  registrarUser(){
-    this.registrado = true;
-    this.mensaje = "Se ha registrado"
-  }
 }
