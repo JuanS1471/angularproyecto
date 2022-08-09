@@ -19,4 +19,9 @@ export class AppComponent {
   apellidoVar:string = "";
   cargoVar:string = "";
   salarioVar:number = 0;
+  agregarEmp(){
+    let miempleado = new empleado(this.nombreVar, this.apellidoVar, this.cargoVar, this.salarioVar)
+    this.empleados.push(miempleado)
+  }
+
 }

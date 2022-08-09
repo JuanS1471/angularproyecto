@@ -1,32 +1,28 @@
 <div class="container">
-    <div class="col"><h1>{{titulo}}</h1></div>
+    <div class="col" style="text-align: center;"><h1>{{titulo}}</h1></div>
     <br><br>
     <form class="form-group row">
-        <div class="form-group col-md-3">
-            <mat-form-field class="example-full-width" appearance="fill">
+        <mat-grid-list cols="4" rowHeight="60">
+            <mat-grid-tile><mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Nombre:</mat-label>
                 <input matInput type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre"  [(ngModel)]="nombreVar" >
-            </mat-form-field>
-        </div>
-        <div class="form-group col-md-3">
-            <mat-form-field class="example-full-width" appearance="fill">
+            </mat-form-field></mat-grid-tile>
+            <mat-grid-tile><mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Apellido:</mat-label>
                 <input matInput type="text" name="apellido" id="apellido" placeholder="Introduzca su apellido"  [(ngModel)]="apellidoVar" >
-            </mat-form-field>
-        </div>
-        <div class="form-group col-md-3">
-            <mat-form-field class="example-full-width" appearance="fill">
+            </mat-form-field></mat-grid-tile>
+            <mat-grid-tile><mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Cargo:</mat-label>
                 <input matInput type="text" name="cargo" id="cargo" placeholder="Introduzca su cargo"  [(ngModel)]="cargoVar" >
             </mat-form-field>
-        </div>
-        <div class="form-group col-md-3">
-            <mat-form-field class="example-full-width" appearance="fill">
+            </mat-grid-tile>
+            <mat-grid-tile><mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Salario:</mat-label>
                 <input matInput type="number" name="salario" id="salario" placeholder="Introduzca su salario"  [(ngModel)]="salarioVar" >
-            </mat-form-field>
-        </div>
+            </mat-form-field></mat-grid-tile>
+        </mat-grid-list>
     </form>
+    <button mat-stroked-button color="primary" type="submit" style="align-self: center; display:flex" (click)="agregarEmp()">Primary</button>
 </div>
 
 
