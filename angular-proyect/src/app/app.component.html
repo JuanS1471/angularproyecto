@@ -21,14 +21,29 @@
                 <input matInput type="number" name="salario" id="salario" placeholder="Introduzca su salario"  [(ngModel)]="salarioVar" >
             </mat-form-field></mat-grid-tile>
         </mat-grid-list>
+        <mat-label>Foto:</mat-label>
+        <input mat-input type="file" name="foto" id="foto" placeholder="foto"  [(ngModel)]="salarioVar" >
     </form>
     <button mat-stroked-button color="primary" type="submit" style="align-self: center; display:flex" (click)="agregarEmp()">Primary</button>
 </div>
-
-
-<mat-card *ngFor="let emp of empleados">
-            <mat-card-header>{{emp.nombre}} 
-                {{emp.apellido}}<br></mat-card-header> 
-                {{emp.cargo}}<br>
-                {{emp.salario}}<br>
-</mat-card>
+<div style="display: flex;
+justify-content: center;
+align-items: center; width: 100%; margin-top: 20px;">
+ <mat-card>
+    <mat-card-header>
+        <mat-card-title>Empleados</mat-card-title>
+        <mat-card-subtitle>Lista de empleados</mat-card-subtitle>
+      </mat-card-header>
+    <mat-grid-list cols="3" rowHeight="150">
+        <mat-grid-tile *ngFor="let emp of empleados"><mat-card >
+            <mat-card-header>
+                <mat-card-title>{{emp.nombre}} 
+                {{emp.apellido}}
+                <mat-card-subtitle>{{emp.cargo}}</mat-card-subtitle>
+                </mat-card-title></mat-card-header> 
+                Cargo: <span [ngStyle]="{color: emp.cargo=='director'? 'red':'black'}">{{emp.cargo}}</span><br>
+                Salario: {{emp.salario}}<br>
+    </mat-card></mat-grid-tile>
+    </mat-grid-list>
+</mat-card>   
+</div>

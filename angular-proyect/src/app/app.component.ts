@@ -10,10 +10,6 @@ export class AppComponent {
   titulo='Listado empleados';
   
   empleados:empleado[]=[
-    new empleado("Jose","gomez","Developer",500000),
-    new empleado("Andres","lopez","Backend",600000),
-    new empleado("Martin","serna","SQL",700000),
-    new empleado("Adriana","gomez","Directivo",800000)
   ]
   nombreVar:string = "";
   apellidoVar:string = "";
