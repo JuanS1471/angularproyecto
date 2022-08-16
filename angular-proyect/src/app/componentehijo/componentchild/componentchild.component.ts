@@ -15,4 +15,10 @@ export class ComponentchildComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  arrayCarc = ['']
+
+  agregarCarac(car: string){
+    this.arrayCarc.push(car)
+  }
+
 }

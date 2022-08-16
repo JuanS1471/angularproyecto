@@ -10,11 +10,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { CaracteristicasEmpleadosComponent } from './componentehijo/componentchild/caracteristicas-empleados/caracteristicas-empleados.component';
 @NgModule({
   declarations: [
     AppComponent,
     ComponenteComponent,
-    ComponentchildComponent
+    ComponentchildComponent,
+    CaracteristicasEmpleadosComponent
   ],
   imports: [
     BrowserModule,
