@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { empleado } from './empleado.model';
+import { ServicioEmpleadosService } from './servicio-empleados.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,11 @@ import { empleado } from './empleado.model';
 })
 export class AppComponent {
   titulo='Listado empleados';
-  
+  constructor(
+   private notification: ServicioEmpleadosService
+  ){
+
+  }
   empleados:empleado[]=[
   ]
   nombreVar:string = "";
@@ -16,8 +21,9 @@ export class AppComponent {
   cargoVar:string = "";
   salarioVar:number = 0;
   agregarEmp(){
-    let miempleado = new empleado(this.nombreVar, this.apellidoVar, this.cargoVar, this.salarioVar)
-    this.empleados.push(miempleado)
+    let miempleado = new empleado(this.nombreVar, this.apellidoVar, this.cargoVar, this.salarioVar);
+    this.notification.mostrarMSG("Nombre: " + miempleado.nombre);
+    this.empleados.push(miempleado);
   }
 
 }

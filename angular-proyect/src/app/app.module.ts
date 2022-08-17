@@ -11,6 +11,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { CaracteristicasEmpleadosComponent } from './componentehijo/componentchild/caracteristicas-empleados/caracteristicas-empleados.component';
+import { ServicioEmpleadosService } from './servicio-empleados.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,7 @@ import { CaracteristicasEmpleadosComponent } from './componentehijo/componentchi
     MatButtonModule,
     MatGridListModule
   ],
-  providers: [],
+  providers: [ServicioEmpleadosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
