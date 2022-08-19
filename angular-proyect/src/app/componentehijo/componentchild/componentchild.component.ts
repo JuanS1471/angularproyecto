@@ -15,7 +15,7 @@ export class ComponentchildComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  arrayCarc = ['']
+  arrayCarc:Array<string> = []
 
   agregarCarac(car: string){
     this.arrayCarc.push(car)

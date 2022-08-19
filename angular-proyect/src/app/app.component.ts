@@ -23,7 +23,6 @@ export class AppComponent {
   salarioVar:number = 0;
   agregarEmp(){
     let miempleado = new empleado(this.nombreVar, this.apellidoVar, this.cargoVar, this.salarioVar);
-    this.notification.mostrarMSG("Nombre: " + miempleado.nombre);
     this.empleadoService.addUser(miempleado);
   }
 
