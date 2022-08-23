@@ -1,38 +1,11 @@
 <header>
     <button mat-button [matMenuTriggerFor]="menu" style="margin-top: 10px;">Menu</button>
     <mat-menu #menu="matMenu">
-        <button mat-menu-item>Home</button>
-        <button mat-menu-item>Item 2</button>
-        <button mat-menu-item>Item 2</button>
-        <button mat-menu-item>Item 2</button>
+        <button mat-menu-item routerLink="">Home</button>
+        <button mat-menu-item routerLink="/proyectos">Item 2</button>
+        <button mat-menu-item routerLink="/contacto">Item 2</button>
+        <button mat-menu-item routerLink="">Item 2</button>
      </mat-menu>
 </header>
 
-<div class="container">
-    <div class="col" style="text-align: center;"><h1>{{titulo}}</h1></div>
-    <br><br>
-    <form class="form-group row">
-        <mat-grid-list cols="4" rowHeight="60">
-            <mat-grid-tile><mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Nombre:</mat-label>
-                <input matInput type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre"  [(ngModel)]="nombreVar" >
-            </mat-form-field></mat-grid-tile>
-            <mat-grid-tile><mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Apellido:</mat-label>
-                <input matInput type="text" name="apellido" id="apellido" placeholder="Introduzca su apellido"  [(ngModel)]="apellidoVar" >
-            </mat-form-field></mat-grid-tile>
-            <mat-grid-tile><mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Cargo:</mat-label>
-                <input matInput type="text" name="cargo" id="cargo" placeholder="Introduzca su cargo"  [(ngModel)]="cargoVar" >
-            </mat-form-field>
-            </mat-grid-tile>
-            <mat-grid-tile><mat-form-field class="example-full-width" appearance="fill">
-                <mat-label>Salario:</mat-label>
-                <input matInput type="number" name="salario" id="salario" placeholder="Introduzca su salario"  [(ngModel)]="salarioVar" >
-            </mat-form-field></mat-grid-tile>
-        </mat-grid-list>
-    </form>
-    <button mat-stroked-button color="primary" type="submit" style="align-self: center; display:flex" (click)="agregarEmp()">Primary</button>
-</div>
-
-<app-componentchild [empleados]="empleados"></app-componentchild>
+<router-outlet></router-outlet>
