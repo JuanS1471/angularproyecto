@@ -14,6 +14,7 @@ import { CaracteristicasEmpleadosComponent } from './componentehijo/componentchi
 import { ServicioEmpleadosService } from './servicio-empleados.service';
 import { empleadosService } from './empleados.service';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { ProyectsComponentComponent } from './proyects-component/proyects-component.component';
 import { QuienComponentComponent } from './quien-component/quien-component.component';
@@ -62,6 +63,7 @@ const appRoutes:Routes=[
     MatButtonModule,
     MatGridListModule,
     MatMenuModule,
+    MatProgressSpinnerModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [ServicioEmpleadosService, empleadosService],
