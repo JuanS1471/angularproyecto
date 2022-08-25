@@ -9,10 +9,12 @@ align-items: center; width: 100%; margin-top: 20px;">
     <div style="box-shadow: 0px 0px 2px 0px; margin: 10px; height: 500px;
     overflow: auto;">
     <mat-grid-list cols="3" rowHeight="400px" style="overflow: auto;">
-        <mat-grid-tile *ngFor="let emp of empleados"><mat-card>
+        <mat-grid-tile *ngFor="let emp of empleados; let i = index"><mat-card>
             <mat-card-header>
-                <mat-card-title>{{emp.nombre}} 
-                {{emp.apellido}}
+                <mat-card-title><a [routerLink]="['/actualizar', i]">
+                {{i+1}}
+                {{emp.nombre}} 
+                {{emp.apellido}}</a>
                 <mat-card-subtitle>{{emp.cargo}}</mat-card-subtitle>
                 </mat-card-title></mat-card-header> 
                 Cargo: <span [ngStyle]="{color: emp.cargo=='director'? 'red':'black'}">{{emp.cargo}}</span><br>
