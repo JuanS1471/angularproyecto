@@ -7,20 +7,20 @@
             <input matInput type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre"  [(ngModel)]="nombreVar" >
         </mat-form-field></mat-grid-tile>
         <mat-grid-tile><mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Dirección:</mat-label>
+            <mat-label>Apellido:</mat-label>
             <input matInput type="text" name="apellido" id="apellido" placeholder="Introduzca su apellido"  [(ngModel)]="apellidoVar" >
         </mat-form-field></mat-grid-tile>
         <mat-grid-tile><mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Pais:</mat-label>
+            <mat-label>Cargo:</mat-label>
             <input matInput type="text" name="cargo" id="cargo" placeholder="Introduzca su cargo"  [(ngModel)]="cargoVar" >
         </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile><mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Ciudad:</mat-label>
+            <mat-label>Salario:</mat-label>
             <input matInput type="number" name="salario" id="salario" placeholder="Introduzca su salario"  [(ngModel)]="salarioVar" >
         </mat-form-field></mat-grid-tile>
     </mat-grid-list>
 </form>
 
 <mat-spinner *ngIf="loading"></mat-spinner>
-<button mat-flat-button color="primary" (click)="volverHome()" *ngIf="!loading">Home</button>
+<button mat-flat-button color="primary" (click)="actualizarEmp()" *ngIf="!loading">Actualizar</button>

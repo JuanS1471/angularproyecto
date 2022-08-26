@@ -15,4 +15,16 @@ export class empleadosService{
         this.notificacion.mostrarMSG("El empleado es: " + empleado.nombre)
         this.empleados.push(empleado);
     }
+    encontrarEmpleado(indice:number){
+        let empleado:empleado = this.empleados[indice];
+
+        return empleado;
+    }
+    actualizarEmp(indice:number, empleado:empleado){
+        let empleadoAct = this.empleados[indice];
+        empleadoAct.nombre = empleado.nombre;
+        empleadoAct.apellido = empleado.apellido;
+        empleadoAct.cargo= empleado.cargo;
+        empleadoAct.salario = empleado.salario;
+    }
 }
