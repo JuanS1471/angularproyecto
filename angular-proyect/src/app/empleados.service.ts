@@ -27,4 +27,7 @@ export class empleadosService{
         empleadoAct.cargo= empleado.cargo;
         empleadoAct.salario = empleado.salario;
     }
+    eliminarEmp(indice:number){
+        this.empleados.splice(indice,1);
+    }
 }

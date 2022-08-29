@@ -38,7 +38,12 @@ export class ActualizarComponent implements OnInit {
   actualizarEmp(){
     let miempleado = new empleado(this.nombreVar, this.apellidoVar, this.cargoVar, this.salarioVar);
     this.empleadoService.actualizarEmp(this.indice, miempleado);
-    this.volverHome()
+    this.volverHome();
+  }
+
+  eliminarEmp(){
+    this.empleadoService.eliminarEmp(this.indice);
+    this.volverHome();
   }
 
 }
