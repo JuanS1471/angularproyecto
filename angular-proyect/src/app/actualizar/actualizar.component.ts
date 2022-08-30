@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Action } from 'rxjs/internal/scheduler/Action';
 import { empleado } from '../empleado.model';
 import { empleadosService } from '../empleados.service';
 
@@ -17,6 +18,7 @@ export class ActualizarComponent implements OnInit {
   salarioVar:number = 0;
   loading !:boolean;
   indice!:number
+  action!:number
   ngOnInit(): void {
     this.indice= this.route.snapshot.params['id']
     let empleado:empleado = this.empleadoService.encontrarEmpleado(this.indice);
@@ -24,7 +26,7 @@ export class ActualizarComponent implements OnInit {
     this.apellidoVar = empleado.apellido;
     this.cargoVar = empleado.cargo;
     this.salarioVar = empleado.salario;
-
+    this.action = parseInt(this.route.snapshot.queryParams['accion'])
   }
 
   volverHome(){
@@ -35,15 +37,26 @@ export class ActualizarComponent implements OnInit {
     }, 2000);
   }
 
-  actualizarEmp(){
-    let miempleado = new empleado(this.nombreVar, this.apellidoVar, this.cargoVar, this.salarioVar);
-    this.empleadoService.actualizarEmp(this.indice, miempleado);
-    this.volverHome();
-  }
+  // actualizarEmp(){
+  //   let miempleado = new empleado(this.nombreVar, this.apellidoVar, this.cargoVar, this.salarioVar);
+  //   this.empleadoService.actualizarEmp(this.indice, miempleado);
+  //   this.volverHome();
+  // }
 
-  eliminarEmp(){
-    this.empleadoService.eliminarEmp(this.indice);
-    this.volverHome();
-  }
+  // eliminarEmp(){
+  //   this.empleadoService.eliminarEmp(this.indice);
+  //   this.volverHome();
+  // }
 
+ actualizarEmp(){
+    
+     if(this.action == 1){
+      let miempleado = new empleado(this.nombreVar, this.apellidoVar, this.cargoVar, this.salarioVar);
+      this.empleadoService.actualizarEmp(this.indice, miempleado);
+      this.volverHome();
+     }else{
+      this.empleadoService.eliminarEmp(this.indice);
+      this.volverHome();
+     }
+   }
 }
