@@ -21,6 +21,7 @@ import { QuienComponentComponent } from './quien-component/quien-component.compo
 import { ContactoComponentComponent } from './contacto-component/contacto-component.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ActualizarComponent } from './actualizar/actualizar.component';
+import { ErrorScreenComponent } from './error-screen/error-screen.component';
 
 const appRoutes:Routes=[
 
@@ -38,6 +39,9 @@ const appRoutes:Routes=[
   },
   {
     path:'actualizar/:id', component: ActualizarComponent
+  },
+  {
+    path:'**', component: ErrorScreenComponent
   }
 
 
@@ -56,7 +60,8 @@ const appRoutes:Routes=[
     HomeComponentComponent,
     QuienComponentComponent,
     ProyectsComponentComponent,
-    ActualizarComponent
+    ActualizarComponent,
+    ErrorScreenComponent
   ],
   imports: [
     BrowserModule,
