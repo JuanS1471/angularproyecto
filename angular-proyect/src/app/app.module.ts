@@ -22,6 +22,8 @@ import { ContactoComponentComponent } from './contacto-component/contacto-compon
 import { RouterModule, Routes } from '@angular/router';
 import { ActualizarComponent } from './actualizar/actualizar.component';
 import { ErrorScreenComponent } from './error-screen/error-screen.component';
+import { DataService } from './data.services';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes:Routes=[
 
@@ -74,9 +76,10 @@ const appRoutes:Routes=[
     MatGridListModule,
     MatMenuModule,
     MatProgressSpinnerModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
   ],
-  providers: [ServicioEmpleadosService, empleadosService],
+  providers: [ServicioEmpleadosService, empleadosService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
