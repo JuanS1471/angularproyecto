@@ -10,6 +10,10 @@ export class empleadosService{
 
     }
 
+    obtainEmp(){
+        return this.dataservice.cargarEmpl()
+    }
+
     empleados:empleado[]=[
     ]
 
