@@ -19,4 +19,12 @@ export class DataService{
             error=>console.log("error: "+ error)
         )
     }
+
+    actualizaEmpleado(indice:number,empleado:empleado){
+        let url = 'https://proyectangular-91409-default-rtdb.firebaseio.com/datos/'+ indice + '.json'
+        this.httpClient.put(url,empleado).subscribe(
+            response=>console.log("Se ha actualizado: " + response),
+            error=>console.log("error: "+ error)
+        )
+    }
 }
