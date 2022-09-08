@@ -27,4 +27,11 @@ export class DataService{
             error=>console.log("error: "+ error)
         )
     }
+    eliminaEmpleado(indice:number){
+        let url = 'https://proyectangular-91409-default-rtdb.firebaseio.com/datos/'+ indice + '.json'
+        this.httpClient.delete(url).subscribe(
+            response=>console.log("Se ha eliminado: " + response),
+            error=>console.log("error: "+ error)
+        )
+    }
 }

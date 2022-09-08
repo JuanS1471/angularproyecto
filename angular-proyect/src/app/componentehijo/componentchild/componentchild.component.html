@@ -18,7 +18,7 @@ align-items: center; width: 100%; margin-top: 20px;">
                 Actuailzar 
                 </a>
                 &nbsp;&nbsp; 
-                <a [routerLink]="['/actualizar', i]" [queryParams]="{accion: '2'}">
+                <a (click)="eliminar(i)" style="cursor: pointer;">
                     Eliminar
                 </a>
                 <mat-card-subtitle>{{emp.cargo}}</mat-card-subtitle>

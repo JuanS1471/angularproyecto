@@ -40,6 +40,10 @@ export class empleadosService{
         this.dataservice.actualizaEmpleado(indice,empleado);
     }
     eliminarEmp(indice:number){
+        this.dataservice.eliminaEmpleado(indice);
+        if(this.empleados != null){
+            this.dataservice.guardarEmpleado(this.empleados);
+        }
         this.empleados.splice(indice,1);
     }
 }
