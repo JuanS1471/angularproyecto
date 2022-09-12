@@ -24,6 +24,7 @@ import { ActualizarComponent } from './actualizar/actualizar.component';
 import { ErrorScreenComponent } from './error-screen/error-screen.component';
 import { DataService } from './data.services';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes:Routes=[
 
@@ -41,6 +42,9 @@ const appRoutes:Routes=[
   },
   {
     path:'actualizar/:id', component: ActualizarComponent
+  },
+  {
+    path: 'login', component: LoginComponent
   },
   {
     path:'**', component: ErrorScreenComponent
@@ -63,7 +67,8 @@ const appRoutes:Routes=[
     QuienComponentComponent,
     ProyectsComponentComponent,
     ActualizarComponent,
-    ErrorScreenComponent
+    ErrorScreenComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
