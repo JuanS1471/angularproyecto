@@ -3,6 +3,7 @@ import { empleado } from './empleado.model';
 import { empleadosService } from './empleados.service';
 import { ServicioEmpleadosService } from './servicio-empleados.service';
 import firebase  from 'firebase/compat/app'
+import { loginService } from './login/login.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,7 +13,8 @@ export class AppComponent implements OnInit {
   titulo='Listado empleados';
   constructor(
    private notification: ServicioEmpleadosService,
-   private empleadoService: empleadosService
+   private empleadoService: empleadosService,
+   private loginService: loginService
   ){
 
   }
@@ -21,6 +23,10 @@ export class AppComponent implements OnInit {
       apiKey: "AIzaSyCfQTVuHgLAEeRPCDoxbgrRbueuxlqespg",
       authDomain: "proyectangular-91409.firebaseapp.com",
     })
+  }
+
+  estaLogueado(){
+    re
   }
 
   empleados = this.empleadoService.empleados

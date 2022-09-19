@@ -29,4 +29,15 @@ export class loginService{
         return this.token;
     }
 
+    estaLogueado(){
+        return this.token;
+    }
+
+    logout(){
+        firebase.auth().signOut().then(()=>{
+            this.token = "";
+            this.router.navigate(['/'])
+        });
+    }
+
 }
