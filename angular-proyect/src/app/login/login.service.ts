@@ -30,6 +30,7 @@ export class loginService{
     }
 
     estaLogueado(){
+        console.log(this.token);
         return this.token;
     }
 

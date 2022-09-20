@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
 
   }
   ngOnInit(): void {
+    this.estaLogueado();
     firebase.initializeApp({
       apiKey: "AIzaSyCfQTVuHgLAEeRPCDoxbgrRbueuxlqespg",
       authDomain: "proyectangular-91409.firebaseapp.com",
@@ -26,8 +27,14 @@ export class AppComponent implements OnInit {
   }
 
   estaLogueado(){
-    re
+    return this.loginService.estaLogueado();
   }
+
+  logout(){
+    this.loginService.logout();
+  }
+
+
 
   empleados = this.empleadoService.empleados
   nombreVar:string = "";
