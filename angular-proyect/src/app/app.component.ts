@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
   }
 
   estaLogueado(){
-    return this.loginService.estaLogueado();
+    return this.loginService.estaLogueado() == ""? false : true;
   }
 
   logout(){
