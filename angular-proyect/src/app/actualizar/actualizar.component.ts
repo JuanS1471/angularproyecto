@@ -26,7 +26,6 @@ export class ActualizarComponent implements OnInit {
     this.apellidoVar = empleado.apellido;
     this.cargoVar = empleado.cargo;
     this.salarioVar = empleado.salario;
-    this.action = parseInt(this.route.snapshot.queryParams['accion'])
   }
 
   volverHome(){
@@ -50,13 +49,9 @@ export class ActualizarComponent implements OnInit {
 
  actualizarEmp(){
     
-     if(this.action == 1){
       let miempleado = new empleado(this.nombreVar, this.apellidoVar, this.cargoVar, this.salarioVar);
       this.empleadoService.actualizarEmp(this.indice, miempleado);
       this.volverHome();
-     }else{
-      this.empleadoService.eliminarEmp(this.indice);
-      this.volverHome();
-     }
+     
    }
 }
